@@ -21,7 +21,7 @@ export default function NoteDetailsClient() {
   });
 
   if (isLoading) return <p className={css.text}>Loading, please wait...</p>;
-  if (isError || !note) return <NoteError error={error} />;
+  if (isError || !note) return <NoteError error={error!} />;
 
   return (
     <div className={css.container}>
