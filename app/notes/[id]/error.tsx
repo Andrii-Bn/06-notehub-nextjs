@@ -1,12 +1,10 @@
 'use client';
 
 type Props = {
-  error: Error | null;
+  error: Error;
 };
 
 const NoteError = ({ error }: Props) => {
-  if (!error) return null;
-
   return (
     <div style={{ padding: '30px', textAlign: 'center', color: 'red' }}>
       <p>Could not fetch note details. {error.message}</p>
